@@ -1,7 +1,18 @@
 ##
 # ! Pandas
+def printLines(a, b="sub heading"):
+    if b.lower() == "title" or b.lower() == "t":
+        print("-" * 80)
+        print(f"{'-' * 20} {a}")
+        print("-" * 80)
+    else:
+        print(f"{'-' * 10} {a}")
+
+
 import pandas as pd
 import numpy as np
+
+printLines("Pandas", "t")
 
 RollNo = [1, 2, 3, 4, 5]
 Name = [
@@ -18,14 +29,24 @@ UT3 = [20, 19, 18, 24, 18]
 UT4 = [22, 22, 24, 20, 22]
 data = {"RollNo": RollNo, "Name": Name, "UT1": UT1, "UT2": UT2, "UT3": UT3, "UT4": UT4}
 
+printLines("Creating Dataframe")
 df = pd.DataFrame(data)
 print(df)
+
+printLines("Displaying top 2 rows")
 print(df.head(2))
+
+printLines("Displaying the last 2 rows")
 print(df.tail(2))
-print(UT1 + UT2 + UT3 + UT4)
+
+printLines("Adding column total")
 df["Total"] = df["UT1"] + df["UT2"] + df["UT3"] + df["UT4"]
 print(df)
+
+printLines("Displaying the row having roll no. 4")
 print(df[df["RollNo"] == 4])
+
+printLines("Displaying column labels")
 print(df.columns)
 
 # ! MatPlotLib
