@@ -1,6 +1,17 @@
 ##
 # ! Pandas
+def printLines(a, b="sub heading"):
+    if b.lower() == "title" or b.lower() == "t":
+        print("-" * 80)
+        print(f"{'-' * 20} {a}")
+        print("-" * 80)
+    else:
+        print(f"{'-' * 10} {a}")
+
+
 import pandas as pd
+
+printLines("Pandas", "t")
 
 data = {
     "Maths": {"Amit": 100, "Mohan": 95, "Sudha": 85},
@@ -8,15 +19,26 @@ data = {
     "SSt": {"Amit": 60, "Mohan": 57.48, "Sudha": 53.58},
 }
 
+printLines("Creating Database")
 df = pd.DataFrame(data)
 print(df)
+
+printLines("Adding Column Total")
 df["Total"] = df["Maths"] + df["Science"] + df["SSt"]
 print(df)
+
+printLines("Adding Column T5 with values")
 df.loc["T5", :] = [75.6, 98.6, 56.6, 230.8]
 print(df)
+
+printLines("Printing Score of Maths and Sciences")
 print(df[["Maths", "Science"]])
+
+printLines("Updating Value of Sudha")
 df.at["Sudha", "Science"] = 85.0
 print(df)
+
+printLines("Deleting a row")
 df = df.drop("Mohan")
 print(df)
 
