@@ -10,7 +10,9 @@ def printLines(a, b="sub heading"):
 
 
 import pandas as pd
-import numpy as np
+from os import name as OSNAME, system
+
+system("clear" if OSNAME == "posix" else "cls")
 
 printLines("Pandas", "t")
 
