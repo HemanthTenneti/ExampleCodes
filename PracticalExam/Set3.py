@@ -1,23 +1,47 @@
 ##
 # ! Pandas
+def printLines(a, b="sub heading"):
+    if b.lower() == "title" or b.lower() == "t":
+        print("-" * 80)
+        print(f"{'-' * 20} {a}")
+        print("-" * 80)
+    else:
+        print(f"{'-' * 10} {a}")
+
+
 import pandas as pd
 import numpy as np
 
+
+printLines("Pandas", "t")
 data = {
     "Col1": {"T1": 50, "T2": 95.5, "T3": np.NaN, "T4": 82.0},
     "Col2": {"T1": 98.0, "T2": 65.0, "T3": 75.0, "T4": 85.5},
     "Col3": {"T1": 60.0, "T2": 57.5, "T3": 69.5, "T4": 49.0},
 }
 
+printLines("Printing Dataframe")
 result = pd.DataFrame(data)
 print(result)
+
+printLines("Adding Column total")
 result["Total"] = result["Col1"] + result["Col2"] + result["Col3"]
 print(result)
+
+printLines("Adding a row t5 with values")
 result.loc["T5", :] = [75.5, 98.0, 56.0, 229.5]
 print(result)
-result.rename(columns={"Col1": "Maths", "Col2": "Science", "Col3": "Social"})
+
+printLines("Renaming Columns")
+result.rename(
+    columns={"Col1": "Maths", "Col2": "Science", "Col3": "Social"}, inplace=True
+)
 print(result)
-# print(result[["Maths", "Science"]])
+
+printLines("Print score of maths and science.")
+print(result[["Maths", "Science"]])
+
+printLines("Update value of t3")
 result.at["T3", "Maths"] = 85.0
 print(result)
 
