@@ -4,13 +4,16 @@ from pandas import DataFrame
 
 # ? Creating DataFrame
 print("Creating the DataFrame")
+
 data = {
     "TV": [200000, 230000, 210000, 240000],
     "FRIDGE": [300000, 200000, 290000, 210000],
     "AC": [240000, 153000, 245000, 170000],
 }
 index = ["QTR1", "QTR2", "QTR3", "QTR4"]
+
 quarterly_sales_df = DataFrame(data, index=index)
+
 print(quarterly_sales_df)
 
 

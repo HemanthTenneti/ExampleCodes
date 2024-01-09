@@ -4,14 +4,18 @@ from pandas import Series
 
 # ? Creating Series
 print("Creating the Series")
+
 S = Series({"A": 4300, "B": 6500, "C": 3900, "D": 6100})
+
 print(S)
 print()
 
 # ? Modifying
 print("Modifying the Series")
+
 S["A"] = 3400
 S["C"] = S["D"] = 5000
+
 print(S)
 
 
