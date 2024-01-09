@@ -2,7 +2,7 @@
 #! -- 1. Pandas --
 from pandas import DataFrame
 
-# ? Creating Series
+# ? Creating DataFrame
 print("Creating the DataFrame")
 
 team1 = {"P1": [700, 975, 970, 900], "P2": [490, 460, 570, 590]}
