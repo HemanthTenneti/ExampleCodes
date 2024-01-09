@@ -3,12 +3,13 @@
 from pandas import Series
 
 # ? Creating Series
-print("-" * 20, "Creating the Series")
+print("Creating the Series")
 S = Series({"A": 4300, "B": 6500, "C": 3900, "D": 6100})
 print(S)
+print()
 
 # ? Modifying
-print("-" * 20, "Modifying the Series")
+print("Modifying the Series")
 S["A"] = 3400
 S["C"] = S["D"] = 5000
 print(S)
@@ -68,10 +69,10 @@ show()
 # * select name,price from product order by stock desc;
 
 # ? Display position of 'a' in name column
-# * select position('a' in name) from product;
+# * select name, position('a' in name) from product;
 
 # ? Display 3 characters from 2nd position of supplier column
-# * select mid(supplier, 2, 3) from product;
+# * select supplier, mid(supplier, 2, 3) from product;
 
 # ? Display average price of each supplier
 # * select supplier, avg(price) from product group by supplier;
