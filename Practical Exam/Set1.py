@@ -49,8 +49,8 @@ show()
 # ? 8       Printer          7900            HP                 20
 
 # ? Creating the table and inserting values
-# * create database HusainPreboard;
-# * use HusainPreboard;
+# * create database Preboard;
+# * use Preboard;
 # * create table product(
 # * No int primary key,
 # * Name varchar(50),
@@ -61,7 +61,7 @@ show()
 # * insert into product values
 # * (1, "Motherboard", 7000, "Intel", 20),
 # * (2, "Keyboard", 1000, "TVSE", 70),
-# * (3, "Mouse", 500, "Logitceh", 60),
+# * (3, "Mouse", 500, "Logitech", 60),
 # * (4, "Soundcard", 600, "Samsung", 50),
 # * (5, "Speakers", 600, "Samsung", 25),
 # * (6, "Monitor", 3000, "Philips", 22),

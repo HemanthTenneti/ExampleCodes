@@ -51,8 +51,8 @@ show()
 
 
 # ? Creating the table and inserting values
-# * create database HusainPreboard;
-# * use HusainPreboard;
+# * create database Preboard;
+# * use Preboard;
 # * create table sports(
 # * StudentNo int primary key,
 # * Class int,

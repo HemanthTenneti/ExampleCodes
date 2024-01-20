@@ -49,8 +49,8 @@ show()
 # ? 10      Shilpa      23      Nuclear Medicine     2008-01-20      400         F
 
 # ? Creating the table and inserting values
-# * create database HusainPreboard;
-# * use HusainPreboard;
+# * create database Preboard;
+# * use Preboard;
 # * create table hospital(
 # * PNo int primary key,
 # * Name varchar(50),
