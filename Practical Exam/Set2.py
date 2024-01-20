@@ -12,9 +12,9 @@ data = {
 }
 index = ["QTR1", "QTR2", "QTR3", "QTR4"]
 
-quarterly_sales_df = DataFrame(data, index=index)
+df = DataFrame(data, index=index)
 
-print(quarterly_sales_df)
+print(df)
 
 
 #! -- 2. Matplotlib --

@@ -32,7 +32,7 @@ from matplotlib.pyplot import bar, xlabel, ylabel, title, show
 years = [2000, 2002, 2004, 2006, 2008, 2010, 2012, 2014, 2016, 2018]
 production = [4, 6, 7, 15, 24, 2, 19, 5, 16, 4]
 
-bar(years, production, color="skyblue")
+bar(years, production)
 xlabel("Year")
 ylabel("Production")
 title("Wheat Production in Different Years")
